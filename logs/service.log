@@ -1,0 +1,694 @@
+[2017-11-19 15:09:09.579] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:09:09.585] [INFO] starter - { action: 'new-request', data: { message: 'URL: /token/get' } }
+[2017-11-19 15:09:20.635] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:09:20.636] [INFO] starter - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:09:20.790] [ERROR] starter - { action: 
+   { Error: Cannot find module 'C:\xampp\htdocs\caseorder\code\apps\models\token_fcm.js'
+       at Function.Module._resolveFilename (module.js:469:15)
+       at Function.Module._load (module.js:417:25)
+       at Module.require (module.js:497:17)
+       at require (internal/module.js:20:19)
+       at Connection.model (C:\xampp\htdocs\caseorder\code\core\dbcore\connection.js:46:29)
+       at Object.token_profile (C:\xampp\htdocs\caseorder\code\apps\models\relations.js:88:26)
+       at Connection.model (C:\xampp\htdocs\caseorder\code\core\dbcore\connection.js:51:46)
+       at Object.token (C:\xampp\htdocs\caseorder\code\apps\models\relations.js:82:25)
+       at Connection.model (C:\xampp\htdocs\caseorder\code\core\dbcore\connection.js:51:46)
+       at Promise (C:\xampp\htdocs\caseorder\code\apps\queries\token.js:7:8)
+       at search (C:\xampp\htdocs\caseorder\code\apps\queries\token.js:6:49)
+       at Object.<anonymous> (C:\xampp\htdocs\caseorder\code\apps\queries\token.js:170:21)
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\generators.js:97:49)
+       at Object.generate (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\generators.js:201:15) code: 'MODULE_NOT_FOUND' },
+  data: { message: undefined } }
+[2017-11-19 15:09:46.678] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:09:46.684] [INFO] starter - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:09:47.044] [ERROR] starter - { action: 
+   { SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+       at Query.formatError (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:175:14)
+       at Query._callback (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:49:21)
+       at Query.Sequence.end (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+       at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+       at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+       at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+       at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+       at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+       at emitOne (events.js:96:13)
+       at Socket.emit (events.js:188:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at Socket.Readable.push (_stream_readable.js:134:10)
+       at TCP.onread (net.js:548:20)
+     name: 'SequelizeDatabaseError',
+     message: 'ER_BAD_FIELD_ERROR: Unknown column \'token.device_id\' in \'field list\'',
+     parent: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'39ee0c7ad362ce664b5cd6a4765252cd\' AND true) LIMIT 1;' },
+     original: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'39ee0c7ad362ce664b5cd6a4765252cd\' AND true) LIMIT 1;' },
+     sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'39ee0c7ad362ce664b5cd6a4765252cd\' AND true) LIMIT 1;' },
+  data: { message: undefined } }
+[2017-11-19 15:12:09.184] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:12:09.190] [INFO] starter - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:12:09.422] [ERROR] starter - { action: 
+   { SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+       at Query.formatError (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:175:14)
+       at Query._callback (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:49:21)
+       at Query.Sequence.end (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+       at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+       at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+       at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+       at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+       at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+       at emitOne (events.js:96:13)
+       at Socket.emit (events.js:188:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at Socket.Readable.push (_stream_readable.js:134:10)
+       at TCP.onread (net.js:548:20)
+     name: 'SequelizeDatabaseError',
+     message: 'ER_BAD_FIELD_ERROR: Unknown column \'token.device_id\' in \'field list\'',
+     parent: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'e825f9718786cce2f33d465e506fc5f4\' AND true) LIMIT 1;' },
+     original: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.device_id' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'e825f9718786cce2f33d465e506fc5f4\' AND true) LIMIT 1;' },
+     sql: 'SELECT `token`.`id`, `token`.`device_id`, `token`.`device_type`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'e825f9718786cce2f33d465e506fc5f4\' AND true) LIMIT 1;' },
+  data: { message: undefined } }
+[2017-11-19 15:13:25.773] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:13:25.779] [INFO] starter - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:13:26.049] [ERROR] starter - { action: 
+   { SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'token.lat' in 'field list'
+       at Query.formatError (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:175:14)
+       at Query._callback (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:49:21)
+       at Query.Sequence.end (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+       at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+       at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+       at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+       at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+       at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+       at emitOne (events.js:96:13)
+       at Socket.emit (events.js:188:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at Socket.Readable.push (_stream_readable.js:134:10)
+       at TCP.onread (net.js:548:20)
+     name: 'SequelizeDatabaseError',
+     message: 'ER_BAD_FIELD_ERROR: Unknown column \'token.lat\' in \'field list\'',
+     parent: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.lat' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'52495633b438f2080fa65852daf000b4\' AND true) LIMIT 1;' },
+     original: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'token.lat' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\code\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\code\node_modules\retry-as-promised\index.js:30:10)
+          at ConnectionManager.<anonymous> (C:\xampp\htdocs\caseorder\code\node_modules\sequelize\lib\sequelize.js:848:12)
+          at ConnectionManager.tryCatcher (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\code\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `token`.`id`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'52495633b438f2080fa65852daf000b4\' AND true) LIMIT 1;' },
+     sql: 'SELECT `token`.`id`, `token`.`ip`, `token`.`token_code`, `token`.`refresh_token`, `token`.`lat`, `token`.`lon`, `token`.`created_date`, `token`.`expired_date`, `token_profile`.`token_id` AS `token_profile.token_id`, `token_profile`.`user_id` AS `token_profile.user_id`, `token_profile`.`admin_id` AS `token_profile.admin_id`, `token_profile`.`last_activity` AS `token_profile.last_activity` FROM `token` AS `token` LEFT OUTER JOIN `token_profile` AS `token_profile` ON `token`.`id` = `token_profile`.`token_id` WHERE (md5(`token_code`) = \'52495633b438f2080fa65852daf000b4\' AND true) LIMIT 1;' },
+  data: { message: undefined } }
+[2017-11-19 15:13:58.393] [INFO] starter - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:13:58.399] [INFO] starter - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:17:27.104] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:17:27.110] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:21:55.985] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:21:55.987] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:28:58.273] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:28:58.279] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 15:30:33.666] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 15:30:33.666] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/refresh' } }
+[2017-11-19 21:28:49.009] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 21:28:49.017] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-19 21:28:49.078] [ERROR] ordersapp - { action: { [Error: Please provide correct token!] message: 'Please provide correct token!', code: 402 },
+  data: { message: undefined } }
+[2017-11-19 21:29:01.871] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 21:29:01.871] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-19 21:29:10.412] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-19 21:29:10.412] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-19 21:29:10.421] [ERROR] ordersapp - { action: { [Error: Please provide correct token!] message: 'Please provide correct token!', code: 402 },
+  data: { message: undefined } }
+[2017-11-20 16:40:50.823] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 16:40:50.832] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/token/get' } }
+[2017-11-20 16:41:59.228] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 16:41:59.234] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 16:42:06.288] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 16:42:06.288] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 16:42:48.422] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 16:42:48.428] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 16:42:49.090] [ERROR] ordersapp - { action: 
+   { [Error: Field user_id is required.,Field product_id is required.]
+     message: 
+      [ 'Field user_id is required.',
+        'Field product_id is required.' ],
+     code: 403 },
+  data: { message: undefined } }
+[2017-11-20 18:29:44.972] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 18:29:44.978] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 18:29:45.464] [ERROR] ordersapp - { action: 
+   { [Error: Field user_id is required.,Field user_id must contain only numeric characters.,Field product_id is required.,Field quantity is required.,Field quantity must contain only numeric characters.]
+     message: 
+      [ 'Field user_id is required.',
+        'Field user_id must contain only numeric characters.',
+        'Field product_id is required.',
+        'Field quantity is required.',
+        'Field quantity must contain only numeric characters.' ],
+     code: 403 },
+  data: { message: undefined } }
+[2017-11-20 18:31:24.917] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 18:31:24.922] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 18:31:55.799] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 18:31:55.806] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 18:31:56.378] [ERROR] ordersapp - { action: 
+   ReferenceError: id is not defined
+       at C:\xampp\htdocs\caseorder\apps\controllers\api\orders.js:39:69
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at Promise._settlePromise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:574:26)
+       at Promise._settlePromise0 (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:614:10)
+       at Promise._settlePromises (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:693:18)
+       at Async._drainQueue (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:133:16)
+       at Async._drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:143:10)
+       at Immediate.Async.drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:17:14)
+       at runCallback (timers.js:649:20)
+       at tryOnImmediate (timers.js:622:5)
+       at processImmediate [as _immediateCallback] (timers.js:594:5),
+  data: { message: undefined } }
+[2017-11-20 18:59:35.799] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 18:59:35.805] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 18:59:36.415] [ERROR] ordersapp - { action: 
+   ReferenceError: id is not defined
+       at C:\xampp\htdocs\caseorder\apps\controllers\api\orders.js:35:69
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at exports.order_product (C:\xampp\htdocs\caseorder\apps\controllers\api\orders.js:53:7)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\route.js:137:13)
+       at Route.dispatch (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\route.js:112:3)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:281:22
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at Function.handle (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:174:3)
+       at router (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:47:12)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5),
+  data: { message: undefined } }
+[2017-11-20 18:59:54.040] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 18:59:54.047] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:49:45.691] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 19:49:45.696] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:49:46.219] [ERROR] ordersapp - { action: 
+   { SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'product.status' in 'where clause'
+       at Query.formatError (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:175:14)
+       at Query._callback (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:49:21)
+       at Query.Sequence.end (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+       at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+       at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+       at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+       at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+       at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+       at emitOne (events.js:96:13)
+       at Socket.emit (events.js:188:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at Socket.Readable.push (_stream_readable.js:134:10)
+       at TCP.onread (net.js:548:20)
+     name: 'SequelizeDatabaseError',
+     message: 'ER_BAD_FIELD_ERROR: Unknown column \'product.status\' in \'where clause\'',
+     parent: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'product.status' in 'where clause'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:30:10)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:848:12
+          at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `id`, `name`, `desc`, `stock`, `price`, `created_date`, `updated_date` FROM `product` AS `product` WHERE `product`.`id` = NULL AND `product`.`status` = \'pending\' LIMIT 1;' },
+     original: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'product.status' in 'where clause'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:30:10)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:848:12
+          at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `id`, `name`, `desc`, `stock`, `price`, `created_date`, `updated_date` FROM `product` AS `product` WHERE `product`.`id` = NULL AND `product`.`status` = \'pending\' LIMIT 1;' },
+     sql: 'SELECT `id`, `name`, `desc`, `stock`, `price`, `created_date`, `updated_date` FROM `product` AS `product` WHERE `product`.`id` = NULL AND `product`.`status` = \'pending\' LIMIT 1;' },
+  data: { message: undefined } }
+[2017-11-20 19:51:26.211] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 19:51:26.217] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:51:26.650] [ERROR] ordersapp - { action: 
+   TypeError: product_queries.get_pending_order is not a function
+       at C:\xampp\htdocs\caseorder\apps\controllers\api\orders.js:44:65
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at Promise._settlePromise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:574:26)
+       at Promise._settlePromise0 (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:614:10)
+       at Promise._settlePromises (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:693:18)
+       at Async._drainQueue (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:133:16)
+       at Async._drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:143:10)
+       at Immediate.Async.drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:17:14)
+       at runCallback (timers.js:649:20)
+       at tryOnImmediate (timers.js:622:5)
+       at processImmediate [as _immediateCallback] (timers.js:594:5),
+  data: { message: undefined } }
+[2017-11-20 19:51:37.657] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 19:51:37.674] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:51:38.286] [ERROR] ordersapp - { action: 
+   { SequelizeDatabaseError: ER_BAD_FIELD_ERROR: Unknown column 'start_date' in 'field list'
+       at Query.formatError (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:175:14)
+       at Query._callback (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:49:21)
+       at Query.Sequence.end (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:86:24)
+       at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:88:8)
+       at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+       at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+       at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+       at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+       at emitOne (events.js:96:13)
+       at Socket.emit (events.js:188:7)
+       at readableAddChunk (_stream_readable.js:176:18)
+       at Socket.Readable.push (_stream_readable.js:134:10)
+       at TCP.onread (net.js:548:20)
+     name: 'SequelizeDatabaseError',
+     message: 'ER_BAD_FIELD_ERROR: Unknown column \'start_date\' in \'field list\'',
+     parent: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'start_date' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:30:10)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:848:12
+          at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `id`, `user_id`, `coupon_id`, `total_price`, `account_number`, `status`, `created_date`, `updated_date`, `start_date` FROM `orders` AS `orders` WHERE `orders`.`status` = \'pending\' LIMIT 1;' },
+     original: 
+      { Error: ER_BAD_FIELD_ERROR: Unknown column 'start_date' in 'field list'
+          at Query.Sequence._packetToError (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+          at Query.ErrorPacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+          at Protocol._parsePacket (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+          at Parser.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Parser.js:75:12)
+          at Protocol.write (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+          at Socket.<anonymous> (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:103:28)
+          at emitOne (events.js:96:13)
+          at Socket.emit (events.js:188:7)
+          at readableAddChunk (_stream_readable.js:176:18)
+          at Socket.Readable.push (_stream_readable.js:134:10)
+          at TCP.onread (net.js:548:20)
+          --------------------
+          at Protocol._enqueue (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\protocol\Protocol.js:141:48)
+          at Connection.query (C:\xampp\htdocs\caseorder\node_modules\mysql\lib\Connection.js:208:25)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at Query.run (C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\dialects\mysql\query.js:39:17)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:849:20
+          at C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:40:21
+          at Promise._execute (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\debuggability.js:300:9)
+          at Promise._resolveFromExecutor (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:483:18)
+          at new Promise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:79:10)
+          at retryAsPromised (C:\xampp\htdocs\caseorder\node_modules\retry-as-promised\index.js:30:10)
+          at C:\xampp\htdocs\caseorder\node_modules\sequelize\lib\sequelize.js:848:12
+          at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+          at Promise._settlePromiseFromHandler (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:512:31)
+        code: 'ER_BAD_FIELD_ERROR',
+        errno: 1054,
+        sqlState: '42S22',
+        index: 0,
+        sql: 'SELECT `id`, `user_id`, `coupon_id`, `total_price`, `account_number`, `status`, `created_date`, `updated_date`, `start_date` FROM `orders` AS `orders` WHERE `orders`.`status` = \'pending\' LIMIT 1;' },
+     sql: 'SELECT `id`, `user_id`, `coupon_id`, `total_price`, `account_number`, `status`, `created_date`, `updated_date`, `start_date` FROM `orders` AS `orders` WHERE `orders`.`status` = \'pending\' LIMIT 1;' },
+  data: { message: undefined } }
+[2017-11-20 19:54:38.518] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 19:54:38.524] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:55:46.576] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 19:55:46.581] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /api/orders/order_product' } }
+[2017-11-20 19:55:47.310] [ERROR] ordersapp - { action: 
+   Error: Can't set headers after they are sent.
+       at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:356:11)
+       at ServerResponse.header (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:730:10)
+       at ServerResponse.send (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:170:12)
+       at ServerResponse.json (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:256:15)
+       at ServerResponse.res.success (C:\xampp\htdocs\caseorder\core\response.js:70:29)
+       at C:\xampp\htdocs\caseorder\apps\controllers\api\orders.js:83:17
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at Promise._settlePromise (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:574:26)
+       at Promise._settlePromise0 (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:614:10)
+       at Promise._settlePromises (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\promise.js:693:18)
+       at Async._drainQueue (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:133:16)
+       at Async._drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:143:10)
+       at Immediate.Async.drainQueues (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\async.js:17:14)
+       at runCallback (timers.js:649:20),
+  data: { message: undefined } }
+[2017-11-20 21:56:09.857] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 21:56:09.857] [INFO] ordersapp - { action: 'new-request', data: { message: 'URL: /phpmyadmin' } }
+[2017-11-20 21:56:09.872] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-20 21:56:10.029] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-20 21:56:10.029] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-20 21:56:10.032] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }

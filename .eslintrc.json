@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "mocha": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-cond-assign": "error",
+        "no-console": "off",
+        "no-const-assign": "error",
+        "no-constant-condition": "error",
+        "no-dupe-args": "error",
+        "no-dupe-keys": "error",
+        "no-duplicate-case": "error",
+        "no-empty": "error",
+        "no-extra-parens": "error",
+        "no-extra-semi": "error",
+        "no-this-before-super": "error",
+        "no-undef": "error",
+        "no-unreachable": "error",
+        "no-unused-vars": "error",
+        "no-var": "error",
+        "no-trailing-spaces": "error",
+        "no-multi-spaces": "error",
+        "constructor-super": "error",
+        "curly": "error",
+        "valid-typeof": "error",
+        "arrow-body-style": "off",
+        "arrow-parens": "error",
+        "arrow-spacing": "error",
+        "array-bracket-spacing": "error",
+        "object-curly-spacing": "error",
+        "comma-spacing": "error",
+        "comma-style": "error",
+        "indent": "error",
+        "space-before-blocks": "error",
+        "space-before-function-paren": "error",
+        "space-in-parens": "error",
+        "space-infix-ops": "error",
+        "space-unary-ops": "error"
+    },
+    "globals": {
+        "Sequelize": true,
+        "ENV": true,
+        "async": true,
+        "myLogger": true,
+        "bluebird": true,
+        "myConfig":true,
+        "MyError":true
+    }
+}
