@@ -1,5 +1,18 @@
 'use strict'
 
+exports.get_orders_detail = (db, id) => new Promise(
+    (resolve, reject) => 
+    {
+        db.model('orders').findOne({
+            where: {
+                id: id
+            }
+        }).then((data)=>{
+            resolve(data)
+        }).catch(reject)
+    }
+)
+
 exports.insert_orders = (db, data)=> new Promise(
     (resolve, reject) => {
     db.model('orders').create(data).then((data)=>{
@@ -24,11 +37,12 @@ exports.update_orders = (db,id, data) => new Promise ((resolve, reject)=>{
     }).catch(reject)
 })
 
-exports.get_pending_order = (db, id) => new Promise(
+exports.get_pending_order = (db, user_id) => new Promise(
     (resolve, reject) => 
     {
         db.model('orders').findOne({
             where: {
+                user_id: user_id,
                 status: 'pending'
             }
         }).then((data)=>{
@@ -60,3 +74,17 @@ exports.update_orders_detail = (db,id, data) => new Promise ((resolve, reject)=>
         resolve(data)
     }).catch(reject)
 })
+
+exports.check_ordered_order = (db, id) => new Promise(
+    (resolve, reject) => 
+    {
+        db.model('orders').findOne({
+            where: {
+                id: id,
+                status: 'ordered'
+            }
+        }).then((data)=>{
+            resolve(data)
+        }).catch(reject)
+    }
+)
