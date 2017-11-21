@@ -20,8 +20,8 @@ module.exports = {
         model.hasMany(db.model('orders_detail'), {foreignKey: 'orders_id'})
         model.hasMany(db.model('orders_payment'), {foreignKey: 'orders_id'})
         model.hasMany(db.model('orders_shipment'), {foreignKey: 'orders_id'})
-        model.hasOne(db.model('coupon'), {foreignKey: 'coupon_id'})
-        model.hasOne(db.model('customer'), {foreignKey: 'user_id'})
+        model.belongsTo(db.model('coupon'), {foreignKey: 'coupon_id'})
+        model.belongsTo(db.model('customer'), {foreignKey: 'user_id'})
     },
 
     orders_detail: (model, db) => {
@@ -38,11 +38,11 @@ module.exports = {
     },
 
     coupon: (model, db) => {
-        model.belongsTo(db.model('orders'), {foreignKey: 'coupon_id'})
+        model.hasOne(db.model('orders'), {foreignKey: 'coupon_id'})
     },
 
     customer: (model, db) => {
-        model.belongsTo(db.model('orders'), {foreignKey: 'user_id'})
+        model.hasMany(db.model('orders'), {foreignKey: 'user_id'})
     },
 
     product: (model, db) => {

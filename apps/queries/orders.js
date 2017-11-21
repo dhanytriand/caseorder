@@ -20,6 +20,13 @@ exports.insert_orders = (db, data)=> new Promise(
     })
 })
 
+exports.insert_order_payment = (db, data)=> new Promise(
+    (resolve, reject) => {
+    db.model('orders_payment').create(data).then((data)=>{
+        resolve(data)
+    })
+})
+
 exports.insert_orders_detail = (db, data)=> new Promise(
     (resolve, reject) => {
     db.model('orders_detail').create(data).then((data)=>{
@@ -111,6 +118,31 @@ exports.get_list_orders = (db) => new Promise(
     (resolve, reject) => 
     {
         db.model('orders').findAll({
+            include: [ {
+                model: db.model('customer')
+            } ]
+        }).then((data)=>{
+            resolve(data)
+        }).catch(reject)
+    }
+)
+
+exports.get_orders_detail_cms = (db, id) => new Promise(
+    (resolve, reject) => 
+    {
+        db.model('orders').findAll({
+            include: [ {
+                model: db.model('orders_detail'),
+                include: [ {
+                    model: db.model('product')
+                } ]
+            },{
+                model: db.model('coupon')
+            } 
+            ],
+            where: {
+                id: id
+            }
         }).then((data)=>{
             resolve(data)
         }).catch(reject)

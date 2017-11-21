@@ -1,19 +1,21 @@
-<div class="content-wrapper generic--table--layout">
-    <h3>order list</h3>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-        </div>
-        <div class="panel-body with-filter">
-        
-        <input type="hidden" name="#{csrf_token_name}" value="#{csrf_token}" />
-        <div class="table--place">
-            <div class="row">
-                <div class="col-sm-12">
-                    <table id="tbl_orders_list" class="table table-striped table-hover datatable_act dataTables_wrapper form-inline dt-bootstrap no-footer">
-                    </table>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
+<div class="content">
+    <h3>Order List</h3>
+        <table>
+            <tr>
+                <td>order id</td>
+                <td>user</td>
+                <td>total price</td>
+                <td>status</td>
+                <td>action</td>
+            </tr>
+            each data_order in all_orders
+                <tr>
+                    <td>#{data_order.id}</td>
+                    <td>#{data_order.customer.email}</td>
+                    <td></td>
+                    <td>#{data_order.total_price}</td>
+                    <td>#{data_order.status}</td>
+                    <td><a href="/cms/orders/view/#{data_order.id}">view</a></td>
+                </tr>
+        </table>
 </div>

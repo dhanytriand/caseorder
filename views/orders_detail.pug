@@ -1,0 +1,26 @@
+<div class="content">
+    <h3>Order Detail</h3>
+        <p>order id: #{orders_data[0].id}</p>
+        if(orders_data[0].coupon_id != null)
+            <p>coupon: #{orders_data[0].coupon.name}</p>
+            <p>percentage: #{orders_data[0].coupon.percentage}</p>
+            <p>value: #{orders_data[0].coupon.value}</p>
+        <p>total price: #{orders_data[0].total_price}</p>
+        <p>account number: #{orders_data[0].account_number}</p>
+        <p>status: #{orders_data[0].status}</p>
+        <table>
+            <tr>
+                <td>product</td>
+                <td>desc</td>
+                <td>quantity</td>
+                <td>price</td>
+            </tr>
+            each data_order in orders_data[0].orders_details
+                <tr>
+                    <td>#{data_order.product.name}</td>
+                    <td>#{data_order.product.desc}</td>
+                    <td>#{data_order.quota}</td>
+                    <td>#{data_order.subtotal}</td>
+                </tr>
+        </table>
+</div>

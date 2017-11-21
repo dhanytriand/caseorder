@@ -80,6 +80,10 @@ module.exports = {
                 type: Sequelize.DATE,
                 allowNull: true
             },
+            end_date: {
+                type: Sequelize.DATE,
+                allowNull: true
+            },
             memory_usage: {
                 type: Sequelize.FLOAT(18,8),
                 allowNull: true

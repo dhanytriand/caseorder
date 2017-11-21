@@ -30,73 +30,80 @@ exports.order_product = (req, res, next) => {
 
         let product_queries = req.queries('product')
         let orders_queries = req.queries('orders')
+        let customer_queries = req.queries('customer')
 
         let get_product = yield product_queries.get_product(req.db, product_id)
         let subtotal = quantity * get_product.price
         let last_stock = get_product.stock - quantity
-        if(get_product){
-
-            if(get_product.stock < quantity){
-                res.error('stock not available')
-            }else{
-                // check pending order
-                let check_pending_order = yield orders_queries.get_pending_order(req.db, user_id)
-                if(check_pending_order){
-                    let orders_detail_exists = yield orders_queries.check_product(req.db, {
-                        orders_id: check_pending_order.id,
-                        product_id: product_id
-                    })
-                    if(orders_detail_exists){
-                        let update_total = check_pending_order.total_price - orders_detail_exists.subtotal + subtotal
-                        let update_orders_detail = yield orders_queries.update_orders_detail(req.db,orders_detail_exists.id,{
-                            quota: quantity,
-                            subtotal: subtotal
-                        })
-                        let update_orders = yield orders_queries.update_orders(req.db,check_pending_order.id,{
-                            total_price: update_total
-                        })
-                    }else{
-                        let insert_orders_detail = yield orders_queries.insert_orders_detail(req.db,{
+        let customer_data = yield customer_queries.get_customer_data(req.db, user_id)
+        console.log("=====>",customer_data)
+        if(customer_data == null){
+            res.error('customer data not found')
+        }
+        else{
+            if(get_product){
+                if(get_product.stock < quantity){
+                    res.error('stock not available')
+                }else{
+                    // check pending order
+                    let check_pending_order = yield orders_queries.get_pending_order(req.db, user_id)
+                    if(check_pending_order){
+                        let orders_detail_exists = yield orders_queries.check_product(req.db, {
                             orders_id: check_pending_order.id,
+                            product_id: product_id
+                        })
+                        if(orders_detail_exists){
+                            let update_total = check_pending_order.total_price - orders_detail_exists.subtotal + subtotal
+                            let update_orders_detail = yield orders_queries.update_orders_detail(req.db,orders_detail_exists.id,{
+                                quota: quantity,
+                                subtotal: subtotal
+                            })
+                            let update_orders = yield orders_queries.update_orders(req.db,check_pending_order.id,{
+                                total_price: update_total
+                            })
+                        }else{
+                            let insert_orders_detail = yield orders_queries.insert_orders_detail(req.db,{
+                                orders_id: check_pending_order.id,
+                                product_id: product_id,
+                                quota: quantity,
+                                subtotal: subtotal,
+                                created_date: new Date(),
+                                updated_date: new Date()
+                            })
+                            let total = check_pending_order.total_price + subtotal
+                            let update_orders = yield orders_queries.update_orders(req.db,check_pending_order.id,{
+                                total_price: total
+                            })
+                        }
+                        
+                    }else{
+                        let insert_order = yield orders_queries.insert_orders(req.db,{
+                            user_id: user_id,
+                            total_price: subtotal,
+                            status: 'pending'
+                        })
+                        let insert_orders_detail = yield orders_queries.insert_orders_detail(req.db,{
+                            orders_id: insert_order.id,
                             product_id: product_id,
                             quota: quantity,
                             subtotal: subtotal,
                             created_date: new Date(),
                             updated_date: new Date()
                         })
-                        let total = check_pending_order.total_price + subtotal
-                        let update_orders = yield orders_queries.update_orders(req.db,check_pending_order.id,{
-                            total_price: total
-                        })
+
                     }
                     
-                }else{
-                    let insert_order = yield orders_queries.insert_orders(req.db,{
-                        user_id: user_id,
-                        total_price: subtotal,
-                        status: 'pending'
-                    })
-                    let insert_orders_detail = yield orders_queries.insert_orders_detail(req.db,{
-                        orders_id: insert_order.id,
-                        product_id: product_id,
-                        quota: quantity,
-                        subtotal: subtotal,
-                        created_date: new Date(),
-                        updated_date: new Date()
-                    })
-
+                    res.success('order created')
                 }
-                
-                res.success('order created')
+
+                let update_stock = yield product_queries.update_product(req.db,product_id,{
+                    stock: last_stock
+                })
+
+                res.success('order added')
+            }else{
+                res.error('product not found')
             }
-
-            let update_stock = yield product_queries.update_product(req.db,product_id,{
-                stock: last_stock
-            })
-
-            res.success('order added')
-        }else{
-            res.error('product not found')
         }
 
     })().catch(next)
@@ -156,7 +163,7 @@ exports.order_confirm = (req, res, next) => {
                     
                 })
             }
-            let update_orders = yield orders_queries.update_orders(req.db, order_id, {
+            let update_orders = yield orders_query.update_orders(req.db, order_id, {
                 total_price: total_price,
                 status: 'ordered',
                 account_number: account_number,
@@ -237,7 +244,7 @@ exports.check_payment_proof = (req, res, next) => {
         ]
         req.validate(req, param)
         let post_data = req.body
-        let order_id = post_data.order_id
+        let order_id = post_data.orders_id
         let bank = post_data.bank
         let account_number = post_data.account_number
         let account_name = post_data.account_name
@@ -245,7 +252,7 @@ exports.check_payment_proof = (req, res, next) => {
 
         let orders_query = req.queries('orders')
         let check_order = yield orders_query.check_ordered_order(req.db, order_id)
-
+        console.log("====>",check_order)
         if(check_order){
             let insert_confirmation_order = yield orders_query.insert_order_payment(req.db, {
                 orders_id: order_id,
