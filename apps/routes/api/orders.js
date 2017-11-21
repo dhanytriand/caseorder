@@ -7,6 +7,6 @@ module.exports = (app, router) => {
     router.post('/order_confirm',ordersController.order_confirm)
     router.post('/check_customer_data',ordersController.check_customer_data)
     router.post('/check_payment_proof',ordersController.check_payment_proof)
-
+    router.post('/check_status_order',ordersController.check_status_order)
 
 }

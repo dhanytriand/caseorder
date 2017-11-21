@@ -692,3 +692,300 @@
         engine: [Function],
         path: undefined } },
   data: { message: undefined } }
+[2017-11-21 14:45:50.291] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:45:50.298] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /cms/orders/list' } }
+[2017-11-21 14:45:50.663] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:45:50.738] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:45:50.738] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:45:50.743] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:50:37.278] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:50:37.279] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /cms/orders/list' } }
+[2017-11-21 14:50:37.364] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:50:37.364] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:50:37.369] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:50:44.651] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:50:44.725] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:50:44.726] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:50:44.732] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:51:38.414] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:51:38.465] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:51:38.466] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:51:38.467] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:51:39.312] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:51:39.357] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:51:39.357] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:51:39.361] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }
+[2017-11-21 14:51:41.513] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:51:41.514] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /cms/orders/list' } }
+[2017-11-21 14:51:41.725] [INFO] ordersapp - { action: 'new-request', data: { message: 'CLIENT IP: ::1' } }
+[2017-11-21 14:51:41.725] [INFO] ordersapp - { action: 'new-request',
+  data: { message: 'URL: /favicon.ico' } }
+[2017-11-21 14:51:41.729] [ERROR] ordersapp - { action: 
+   { Error: Failed to lookup view "404" in views directory "C:\xampp\htdocs\caseorder/views"
+       at EventEmitter.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\application.js:580:17)
+       at ServerResponse.render (C:\xampp\htdocs\caseorder\node_modules\express\lib\response.js:971:7)
+       at C:\xampp\htdocs\caseorder\core\response.js:57:21
+       at next (native)
+       at tryCatcher (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\util.js:16:23)
+       at PromiseSpawn._promiseFulfilled (C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:97:49)
+       at C:\xampp\htdocs\caseorder\node_modules\bluebird\js\release\generators.js:201:15
+       at ServerResponse.res.render (C:\xampp\htdocs\caseorder\core\response.js:59:15)
+       at fw.use (C:\xampp\htdocs\caseorder\core\index.js:75:25)
+       at Layer.handle [as handle_request] (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\layer.js:95:5)
+       at trim_prefix (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:317:13)
+       at C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:284:7
+       at Function.process_params (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:335:12)
+       at next (C:\xampp\htdocs\caseorder\node_modules\express\lib\router\index.js:275:10)
+       at SendStream.error (C:\xampp\htdocs\caseorder\node_modules\serve-static\index.js:121:7)
+       at emitOne (events.js:96:13)
+     view: 
+      View {
+        defaultEngine: 'pug',
+        ext: '.pug',
+        name: '404',
+        root: 'C:\\xampp\\htdocs\\caseorder/views',
+        engine: [Function],
+        path: undefined } },
+  data: { message: undefined } }

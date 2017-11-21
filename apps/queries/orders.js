@@ -88,3 +88,31 @@ exports.check_ordered_order = (db, id) => new Promise(
         }).catch(reject)
     }
 )
+
+exports.get_all_order = (db, user_id) => new Promise(
+    (resolve, reject) => 
+    {
+        db.model('orders').findAll({
+            include: [ {
+                model: db.model('orders_detail')
+            } ],
+            where: {
+                id: user_id
+            }
+        }).then((data)=>{
+            resolve(data)
+        }).catch(reject)
+    }
+)
+
+// cms
+
+exports.get_list_orders = (db) => new Promise(
+    (resolve, reject) => 
+    {
+        db.model('orders').findAll({
+        }).then((data)=>{
+            resolve(data)
+        }).catch(reject)
+    }
+)

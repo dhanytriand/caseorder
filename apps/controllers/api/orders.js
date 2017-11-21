@@ -152,6 +152,9 @@ exports.order_confirm = (req, res, next) => {
                 else if(coupon.value != 0){
                     total_price = total_price - coupon.value
                 }
+                let update_coupon = yield coupon_query.update_coupon(req.db, coupon_data.id, {
+                    
+                })
             }
             let update_orders = yield orders_queries.update_orders(req.db, order_id, {
                 total_price: total_price,
@@ -256,6 +259,39 @@ exports.check_payment_proof = (req, res, next) => {
         }else{
             res.error('invalid order')
         }
+
+    })().catch(next)
+}
+
+exports.check_status_order = (req, res, next) => {
+    bluebird.coroutine(function*() {
+        let param = [
+            {
+                name: 'user_id',
+                rules: [
+                    'required','numeric'
+                ]
+            }
+        ]
+        req.validate(req, param)
+
+        let post_data = req.body
+        let user_id = post_data.user_id
+        let orders_query = req.queries('orders')
+
+        let all_order = yield orders_query.get_all_order(req.db, user_id)
+        let result = []
+        let detail = []
+        for( let i in all_order){
+            result[i] = {
+                order_id: all_order[i].id,
+                status: all_order[i].status,
+                total_price: all_order[i].total_price,
+                orders_detail: all_order[i].orders_detail
+            }
+        }
+
+        res.success(result)
 
     })().catch(next)
 }
