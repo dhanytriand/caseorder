@@ -282,7 +282,7 @@ module.exports = {
             status: {
                 type: Sequelize.ENUM('pending','ordered','paid','shipping','completed','canceled'),
                 allowNull: true,
-                defaultValue: 'ordered'
+                defaultValue: 'pending'
             },
             created_date: {
                 type: Sequelize.DATE,
